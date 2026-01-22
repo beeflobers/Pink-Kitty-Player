@@ -15,3 +15,14 @@ btn.addEventListener('click', () => {
     console.log("Música tocando"); // Aqui você colocaria musica.play()
   }
 });
+
+const botão = document.getElementById('botão-controle'); // Ajuste o ID se necessário
+const som = document.getElementById("musica");
+
+botão.addEventListener("click", () => { 
+    if (som.paused) {
+        som.play();   // Se estiver parado, toca
+    } else {
+        som.pause();  // Se estiver tocando, pausa
+    }
+});
