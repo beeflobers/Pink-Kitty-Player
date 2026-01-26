@@ -16,7 +16,7 @@ btn.addEventListener('click', () => {
   }
 });
 
-const botão = document.getElementById('botão-controle'); // Ajuste o ID se necessário
+const botão = document.getElementById('botão-controle'); 
 const som = document.getElementById("musica");
 
 botão.addEventListener("click", () => { 
@@ -41,4 +41,43 @@ som.addEventListener('timeupdate',() => {
       som.currentTime =(barra.value/100)*som.duration;
    }
   });
-  
+
+  async function buscar () {
+    const buscar = document.getElementById('buscar').value;
+    
+
+    const icone = document.getElementById ('botão-controle');
+
+    try {
+      const resposta = await fetch(`https://listenfree.in/search?q=${buscar}`);
+      
+      if (!resposta.ok) {
+        throw new Error('Erro na rede');
+      }
+      
+    const dados = await resposta.json();
+
+    const imagem = document.getElementById('capa');
+    imagem.src = dados.data[0].image;
+
+    const titulo = document.getElementById('Nome-musica');
+    titulo.innerText = dados.data[0].song;
+
+    const som = document.getElementById('musica')
+    som.src= dados.data[0].downloadUrl;
+
+    som.play();
+    icone.classList.replace('fa-play', 'fa-pause');
+
+    }
+    catch(error) {
+      console.log("Ops, algo deu errado:", error);
+    }
+     
+  }
+
+
+
+
+
+
