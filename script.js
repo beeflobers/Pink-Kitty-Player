@@ -2,33 +2,37 @@ const btn = document.getElementById('botão-controle');
 const playIcon = btn.querySelector('.Play');
 const pauseIcon = btn.querySelector('.Pause');
 
-btn.addEventListener('click', () => {
-  if (playIcon.style.display === 'none') {
-    // Se o play está escondido, mostra o play e esconde o pause
-    playIcon.style.display = 'inline-block';
-    pauseIcon.style.display = 'none';
-    console.log("Música pausada"); // Aqui você colocaria musica.pause()
-  } else {
-    // Se o play está visível, esconde ele e mostra o pause
-    playIcon.style.display = 'none';
-    pauseIcon.style.display = 'inline-block';
-    console.log("Música tocando"); // Aqui você colocaria musica.play()
-  }
-});
+
 
 const botão = document.getElementById('botão-controle'); 
 const som = document.getElementById("musica");
+const barra = document.getElementById('barra-progresso');
+
 
 botão.addEventListener("click", () => { 
     if (som.paused) {
-        som.play();   // Se estiver parado, toca
+        som.play(); 
+        playIcon.style.display = 'none';
+        pauseIcon.style.display = 'inline-block';
     } else {
-        som.pause();  // Se estiver tocando, pausa
+        som.pause();
+        playIcon.style.display = 'inline-block';
+        pauseIcon.style.display = 'none';
     }
 });
 
+som.addEventListener('ended', () => { 
+  playIcon.style.display = 'inline-block';
+  pauseIcon.style.display = 'none';
+  barra.value = 0;
 
-const barra = document.getElementById('barra-progresso');
+});
+
+som.addEventListener('play', () => { 
+  playIcon.style.display = 'none';
+  pauseIcon.style.display = 'inline-block';
+
+});
 
 som.addEventListener('timeupdate',() => {
 
@@ -63,8 +67,9 @@ som.addEventListener('timeupdate',() => {
     const musica = dados.results[0];
     
 
-    const imagem = document.getElementById('capa');
-    imagem.src = musica.artworkUrl100;
+    const imagem = document.getElementById('capa'); 
+    imagem.src = musica.artworkUrl100.replace("100x100bb.jpg","600x600bb.jpg");
+  
 
     const titulo = document.getElementById('Nome-musica');
     titulo.innerText = musica.trackName;
