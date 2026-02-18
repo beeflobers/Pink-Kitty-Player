@@ -53,11 +53,10 @@ som.addEventListener('timeupdate',() => {
     const buscar = document.getElementById('buscar').value;
     const icone = document.getElementById ('botão-controle');
 
-    const proxy = 'https://cors-anywhere.herokuapp.com/';
-    const urlApple = `https://itunes.apple.com/search?term=${encodeURIComponent(buscar)}&entity=song&limit=1`;
+    const urllamba = 'https://bmkfldnlyu7arv5swreozju5ne0wlmlw.lambda-url.us-east-1.on.aws/'
 
      try {
-      const resposta = await fetch (proxy + urlApple);
+      const resposta = await fetch (`${urllamba}?artist=${encodeURIComponent(buscar)}`);
       
       if (!resposta.ok) {
         throw new Error('Erro na rede');
