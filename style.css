@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap');
+
 
 .FundoPlayer {
     width: 25vh;
@@ -100,7 +102,11 @@ input[type="text"]:focus {
 
 h2 {
 
-font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-family: "Kiwi Maru", serif;
+font-weight: 400;
 color: #601769;
+font-style: normal;
 
 }
+
+
