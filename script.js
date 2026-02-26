@@ -92,6 +92,15 @@ som.addEventListener('timeupdate',() => {
     }
   }
 
-  alert('Pessoa que fez o player em aprendizagem, não espere perfeição')
+  alert('Pessoa que fez o player em aprendizagem,  não espere perfeição')
   confirm('ok?')
-  prompt('Qual o seu nome?')
+  let nome = prompt('Qual o seu nome?')
+  alert('Seja Bem vindo, ' +  nome + '!')
+  alert(`seu nome tem ${nome.length} letras`)
+
+  let n1 = Number(prompt('Digite um número:')) 
+  let n2 = Number(prompt('Digite outro número:'))
+  var resultado = n1 + n2
+
+  alert(`a soma de ${n1} e ${n2} é ${resultado}` )
+
