@@ -91,3 +91,21 @@ som.addEventListener('timeupdate',() => {
       console.log("Ops, algo deu errado:", error);
     }
   }
+
+   let cantora = (prompt('qual a sua cantora favorita?'))
+    /*console.log(cantora.includes['ariana grande', 'blackpink', 'lisa', 'jennie', 'ari' ]) */ // o include é usado para verificar a existencia de um valor, nesse caso esta em array 
+ 
+    if(['ariana grande', 'blackpink', 'lisa', 'jennie','ari','ariana' ].includes(cantora.toLowerCase())) {
+      alert('Que bad de escolha')
+    } else {
+      alert('otíma escolha')
+    }
+  
+
+
+  
+  
+
+
+
+   
