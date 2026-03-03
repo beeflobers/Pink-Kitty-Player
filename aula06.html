@@ -1,40 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="Pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>teste</title>
-
-    <style>
-        body {
-            font: normal 20pt arial;
-        }
-    </style>
+    <title> adição de números </title> 
 </head>
 <body>
-    
+    <input type="number" name="n1" id="n1"> +
+    <input type="number" name="n2" id="n2">
+    <input type="button" value="Somar" onclick="somar()">
+    <div id="res"> Resultado </div>  
+
     <script>
 
-     let nome = prompt("qual seu nome?")
-    document.write(`<strong> ${nome} </strong> seu nome tem ${nome.length} letras <br>`) 
-    document.write(`seu nome em em maiuscula é ${nome.toUpperCase()} <br/> `)
-    document.write(`seu nome em minusculo é ${nome.toLowerCase()}`)
-     
+       function somar() {
+        
+        n1 = Number(document.getElementById('n1').value)
+        n2 = Number(document.getElementById('n2').value)
+        res = document.querySelector('div#res')
+
+        res.innerText= ` a soma de ${n1} e ${n2} é igual a: ` + Number(n1+n2)
+    }
+
     
-      
-      alert(`Irei descobrir sua idade ${nome}`)
-      let ano1 = Number(prompt('Qual seu ano de nascimento?'))
-      let ano2 = Number(prompt('Em que ano estamos?'))
-      resultado = ano2 - ano1
-
-      alert( `Sua idade é ${resultado}`)
-
-
-  
-
-
-
 
     </script>
+
 </body>
 </html>
+
+
+
+
