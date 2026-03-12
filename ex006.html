@@ -31,24 +31,23 @@
 
      var a = document.getElementById('area')
 
-     a.addEventListener('click', cliclar)
-     a.addEventListener( 'mouseenter', entrar )
-     a.addEventListener('mouseout' , sair)
-
-    function cliclar() {
+    a.addEventListener('click',() => {
     a.innerHTML = "clicou!"
     a.style.background = 'yellow'
+    })
 
-    }
-
-   function entrar() {
+    a.addEventListener('mouseenter', () => {
    a.innerText = "entrou!"
-   }
+   })
+
+   a.addEventListener('mouseout',() => {
+    a.innerText = "saiu!"
+    a.style.background = 'rgb(204, 160, 218)'
+   })
+
  
-   function sair() {
-      a.innerText = "saiu!"
-      a.style.background = 'rgb(204, 160, 218)'
-   }
+  
+      
 
 
 </script>
