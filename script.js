@@ -93,7 +93,7 @@ som.addEventListener('timeupdate',() => {
                 imagem.src = musica.artworkUrl100.replace("100x100bb.jpg", "600x600bb.jpg");
 
                 const titulo = document.getElementById('Nome-musica');
-                titulo.innerText = musica.trackName;
+                titulo.innerText = musica.artistName
 
                 const som = document.getElementById('musica');
                 som.src = musica.previewUrl;
