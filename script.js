@@ -45,6 +45,7 @@ som.addEventListener('ended', () => {
   playIcon.style.display = 'inline-block';
   pauseIcon.style.display = 'none';
   barra.value = 0;
+   Player.classList.remove('rotação')
 
 });
 
@@ -95,7 +96,7 @@ som.addEventListener('timeupdate',() => {
                 const cantor = document.getElementById('Nome-cantor');
                 cantor.innerText = musica.artistName
 
-                const melodia = getElementById('Nome-musica')
+                const melodia = document.getElementById('Nome-musica');
                 melodia.innerText = musica.trackName
 
                 const som = document.getElementById('musica');
