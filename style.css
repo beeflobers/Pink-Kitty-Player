@@ -135,11 +135,20 @@ display: inline-flex;
 }
 
 #pesquisar {
+display: flex;
+align-items: center;
+padding: 10px 16px 8px 8px;
+gap: 4px;
 margin-top: 20px;
 cursor: pointer;
-background-color:  #eee6ed;
-border-radius: 8px; 
-border: 1px solid #692569;
+background-color:  #e9e6ee;
+border-radius: 24px; 
+border: 5px rgb(192, 142, 192) #3d073d;
+font-size: 15px;
+
+
+
+
 }
 
 
