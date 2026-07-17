@@ -239,16 +239,25 @@ footer {
         gap: 15px;
         margin: 0 auto;
         background-color: color-mix(in srgb, purple 15%, pink);
-        border-radius: 10px;
+        border-radius: 8px;
         overflow-y: auto;
+        
     }
 
     body {
   margin: 0 auto;
-
-
-
     }
+
+  #Nome-cantor, #Nome-musica {
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+font-size: 23px;
+}
+ #barra-progresso {
+    margin-left: 10%;
+ } 
+
 }
 
 
