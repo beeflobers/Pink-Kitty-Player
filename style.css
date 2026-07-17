@@ -23,9 +23,9 @@
 width: 100%;
 max-width: 500px;
 
-white-space: nowrap;
-overflow: hidden;
-text-overflow: ellipsis;
+white-space: nowrap;/*impede o texto de pular linha */
+overflow: hidden;/*impede o texto de ultrapassar o limite da width */
+text-overflow: ellipsis;/* adiciona tres pontinhos no final do texto cortado*/
 }
 
 
