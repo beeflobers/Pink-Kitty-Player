@@ -239,7 +239,7 @@ footer {
         gap: 15px;
         margin: 0 auto;
         background-color: color-mix(in srgb, purple 15%, pink);
-        border-radius: 10px;
+        border-radius: 8px;
         overflow-y: auto;
     }
 
