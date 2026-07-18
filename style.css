@@ -261,12 +261,6 @@ footer {
     right: 35%
     
 }
-    #Nome-cantor, #Nome-musica {
-width: 87%;
-overflow-x: auto;
-text-overflow: ellipsis;
-
-}
 
 }
 
