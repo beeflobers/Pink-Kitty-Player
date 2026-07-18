@@ -251,9 +251,12 @@ footer {
     }
 
   #Nome-cantor, #Nome-musica {
+    width: 100%;
+    overflow-x: auto;
 white-space: nowrap;
 overflow: hidden;
 text-overflow: ellipsis;
+-webkit-overflow-scrolling: touch;
 }
  #barra-progresso {
     margin-left: 10%;
