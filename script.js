@@ -108,9 +108,9 @@ const InfoMusic = (musica, icone) => {
         data: { // o objeto data pega/contém os filtros da pesquisa 
             term: buscar, // term é o campo de busca da apple, para buscar o meu valor de busca 
             media: "music", // define oque eu quero na pesquisa, músicas 
-            limit: 10 // define um limite de 10 musicas para a pesquisa 
+            limit: 190 // define um limite de musicas para a pesquisa, eu thonga não vi oque a eu do passado escreveu e depois vi o "erro" de retonar só 10 musicas pela API, LOL
       },
-      dataType: "jsonp", // transforma os dados em um script, usa o jsonp // https://itunes.apple.com/search?term=valor_de_busca&media=music&limit=10
+      dataType: "jsonp", // transforma os dados em um script, usa o jsonp // https://itunes.apple.com/search?term=valor_de_busca&media=music&limit=190
       success:function(data) { // caso sucesso recebe os dados de volta e coloca na função  data 
       try {
          if (data.results) {
