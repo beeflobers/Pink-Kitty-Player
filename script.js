@@ -148,9 +148,6 @@ const InfoMusic = (musica, icone) => {
             }
              
           }
-
-                
-
             } else {
                 console.log("Nenhuma música encontrada.");
             }
