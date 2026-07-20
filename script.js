@@ -119,26 +119,33 @@ const InfoMusic = (musica, icone) => {
       try {
          if (data.results) {
                 let musica = data.results[0];
-                InfoMusic(musica, icone)
+                
 
                 let resultados = data.results
                 let musicasindex = 0
                 let musicas = resultados[musicasindex]
 
-                avancar.onclick = () => {
-               if (musicasindex > resultados.length - 1) {
-            } else {
-              musicasindex++
-              InfoMusic(resultados[musicasindex], icone)
+                InfoMusic(musica, icone)
 
-            } 
+                avancar.onclick = null
+                voltar.onclick = null
+
+
+
+                avancar.onclick = () => {
+               if (musicasindex < resultados.length - 1) {
+            } musicasindex++
+              InfoMusic(resultados[musicasindex], icone)
+            
           }
 
           voltar.onclick = () => {
-               if (musicasindex <= resultados.length - 1) {
+               if (musicasindex > 0 ) {
                 musicasindex--
                 InfoMusic(resultados[musicasindex], icone)
-            }  
+            }  else {
+              som.currentTime = 0
+            }
              
           }
 
@@ -160,7 +167,7 @@ const InfoMusic = (musica, icone) => {
  }
      
 
-// A api do itunes não aceita não aceita as requsições do meu localhost da erro de cors, para a função de busca funcionar é preciso usar uma função da bliblioteca do jquery 
+// A api do itunes não aceita as requsições do meu localhost da erro de cors, para a função de busca funcionar é preciso usar uma função da bliblioteca do jquery 
 // o jsonp que transforma  uma requisição em um script do tipo get, que é as informações na url 
 
 
