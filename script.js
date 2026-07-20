@@ -3,10 +3,6 @@ const pauseIcon = document.getElementById('icone-pause')
 const playIcon = document.getElementById('icone-play')
 
 
-
-
-
-
 const som = document.getElementById("musica")
 const barra = document.getElementById('barra-progresso')
 const pesquisar = document.getElementById ('pesquisar')
